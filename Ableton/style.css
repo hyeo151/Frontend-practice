@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background:white;
+}
+
+.primary {
+    display: flex;
+    gap:2rem;
+    align-items:center;
+    margin-bottom: 1rem;
+    margin: 1rem 1rem   
+}
+
+.primary svg.selected {
+    fill:white;
+}
+
+.primary svg, .menu-icon{
+    z-index: 1;
+}
+
+.menu-icon {
+    display:flex;
+    align-items: center;
+    gap: .5rem;
+    cursor:pointer;
+}
+
+.menu-icon.selected {
+    color:white;
+}
+
+.menu-icon svg{
+    transform: rotate(180deg) translateY(-50%);
+}
+.menu-icon svg.selected{
+    fill:white;
+    transform: rotate(0deg) translateY(1px);
+}
+
+.main-nav__seperator{
+    display: block;
+    height: 0;
+    border-top: 2px solid #eee;
+}
+
+.secondary {
+    margin: 1rem 1rem;
+}
+
+.secondary ul{
+    display: flex;
+    list-style: none;
+    font-size:.7em;
+    gap:1rem;
+}
+
+.secondary ul li a {
+    color: black;
+    text-decoration: none;
+}
+.secondary ul li a.selected {
+    color: #ff764d
+}
+
+.menu-items{
+    position: absolute;
+    top:-100%;
+    left:0;
+    padding:60px 15px 0 15px;
+    width: 100%;
+    background: blue;
+    transition: top .5s;
+}
+
+.menu-items.selected {
+    top:0;
+}
+
+.main-menu {
+    list-style: none;
+    display:flex;
+    flex-direction: column;
+    gap:1.8rem;
+}
+
+.main-menu li a {
+    text-decoration:none;
+    color:white;
+    cursor:pointer;
+}
+ul.main-menu li:last-child{
+    margin-top:-.9rem;;
+}
+ul.main-menu li:last-child a{
+    font-size:.7rem;
+}
+
+.menu-section {
+    margin-top: 1.6rem;
+    color:white;
+}
+
+.menu-section h3 , .menu-sub-section h3{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom:.5rem;
+}
+
+.menu-section ul {
+    list-style:none;
+}
+
+.menu-section ul li {
+    margin-top:.7rem;
+}
+
+.menu-section ul a, .menu-sub-section ul li a{
+    text-decoration:none;
+    color: white;
+    font-size:.7rem;
+    font-weight:400;
+}
+
+.menu-sub-section {
+    margin:2rem 0;
+    color: white;
+}
+
+.menu-sub-section ul{
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.menu-sub-section ul li{
+    display:inline-block;
+    list-style:none;
+    width: 15rem;
+}
+.menu-sub-section ul li a {
+    text-decoration:none;
+    color: white;
+}
+
+.menu-sub-section h4 {
+    margin-bottom:.4rem;
+}
+.menu-sub-section p {
+    line-height:1.2rem;
+}
+
+/* BreakingPoints
+1280px Fonts get smaller for Nav
+
+1023px nav bar becomes mobile friendly */
