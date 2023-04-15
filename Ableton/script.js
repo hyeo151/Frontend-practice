@@ -1,11 +1,18 @@
-const menuIconEle = document.querySelector(".menu-icon");
-const menuItemsEle = document.querySelector(".menu-items");
-const menuIconSvg = document.querySelector(".menu-icon svg");
-const primarySvg = document.querySelector(".primary svg");
+const mainNavTriggerLabelEle = document.querySelector(".main-nav__trigger-label");
+const mainNavPrimaryWrapperEle = document.querySelector(".main-nav__primary-wrapper");
+const mainNavTriggerLabel = document.querySelector(".main-nav__trigger-label svg");
+const mainNavLogo = document.querySelector(".main-nav__logo");
+const moreButton = document.querySelector(".more-Button");
+const mainNavMore = document.querySelector(".main-nav__more");
 
-menuIconEle.addEventListener("click",()=> {
-    menuIconEle.classList.toggle("selected");
-    menuItemsEle.classList.toggle("selected");
-    menuIconSvg.classList.toggle("selected");
-    primarySvg.classList.toggle("selected");
+mainNavTriggerLabelEle.addEventListener("click",()=> {
+    mainNavPrimaryWrapperEle.classList.toggle("selected");
+    mainNavTriggerLabel.classList.toggle("selected");
+    mainNavLogo.classList.toggle("selected");
+    mainNavTriggerLabelEle.classList.toggle("selected");
+})
+
+moreButton.addEventListener("click",()=> {
+    mainNavMore.classList.toggle("selected");
+
 })
