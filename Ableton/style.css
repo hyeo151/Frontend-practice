@@ -4,7 +4,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roberto", sans-serif;
 }
 
 body {
@@ -227,9 +227,17 @@ body {
 }
 
 .image-section {
-    margin: 3rem 0;
+    margin: 3rem auto;
     padding-top: 8.33333vw;
     padding-bottom: 8.33333vw;
+}
+
+.image-section img{
+    width:100%;
+}
+
+.page-about__media {
+    width: 44rem;
 }
 .page-about__collage {
     position: relative;
@@ -406,16 +414,46 @@ body {
         margin-right: .5rem;
     }
     .social-icons svg:nth-child(1){
-        background:blue;
+        background:#3477f2
     }
     .social-icons svg:nth-child(2){
-        background:lightblue;
+        background:#1DA1F2;
     }
     .social-icons svg:nth-child(3){
         background:red;
     }
     .social-icons svg:nth-child(4){
-        background:orange;
+        background:#F77737;
+    }
+
+    .language label{
+        font-size:1rem;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        display:block;
+    }
+
+    .language select{
+        border:none;
+        background:#eee;
+        font-size:.8rem;
+        padding: .2rem .2rem;
+    }
+    .language select:nth-of-type(1){
+        width: 7rem;
+    }
+    .language select:nth-of-type(2){
+        width: 10rem;
+    }
+    .brand {
+        display: flex;
+        align-items:center;
+        gap:1rem;
+        margin-top:3rem;
+        margin-bottom: 5rem;
+    }
+    .brand svg{
+        width:2.5rem;
     }
 /* footer finish */
 
@@ -525,6 +563,7 @@ body {
 
     .footer {
         grid-template-columns: 1fr 1fr 1fr;
+        row-gap:1rem;
     }
 
     .footer h2{
@@ -543,6 +582,25 @@ body {
     .footer-menu {
         grid-column: 1/ 3;
         grid-row:4;
+    }
+    .footer-menu ul {
+        display: flex;
+    }
+    .footer-menu ul li {
+        margin-right:1rem;
+        font-size:.8rem;
+    }
+
+    .brand {
+        flex-direction:row-reverse;
+        margin-top:0;
+    }
+
+    .email-input input{
+        width: 70%;
+    }
+    .email-input button{
+        width: 30%;
     }
     /* footer End*/
 }
