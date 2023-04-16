@@ -190,12 +190,11 @@ body {
 .page-about__header {
     background-image: url("img/header.avif");
     background-color: #eee;
-    width:798px;
+    width:80vw;
     height:807px;
     background-size: cover;
     background-position: 50% 50%;
-    margin-left: 8.33333vw;
-    margin-right: 8.33333vw;
+    margin: 0 auto;
     margin-bottom: 8.33333vw;
     min-height: calc(100vh - 120px);
     position: relative;
@@ -203,10 +202,10 @@ body {
 
 .page-about__header__ableton-logo {
     position: absolute;
-    width: 430px;
-    height: 104px;
-    top:40%;
-    left:20%;
+    width: 238px;
+    height: 81px;
+    top: 46%;
+    left: 33%;
 }
 
 .page-about__text {
@@ -249,15 +248,15 @@ body {
 .page-about__collage > img:nth-child(1){
     position:relative;
     z-index:1;
-    width: 45vw;
-    height: 45vw;
+    width: min(45vw,40.5rem);
+    height: min(45vw,40rem);
     left: 10vw;  
 }
 
 .collage-wrapper{
     background:#FBFFA7;
-    width: 58vw;
-    height: 62vw;
+    width: min(58vw,57rem);
+    height: min(62vw,53rem);
     position: absolute;
     top:0;
     right:0;
@@ -265,7 +264,7 @@ body {
 .collage-wrapper img{
     position:absolute;
     right:5vw;
-    top:20vw;
+    top:min(20vw,16rem);
     width: 55%;
 } 
 
@@ -277,12 +276,12 @@ body {
     position:absolute;
     top:30%;
     right:5%;
-    width: 40vw;
+    width: min(40vw,41rem);
 }
 
 .collage-wrapper_2 {
     background: #B6FFC0;
-    width: 60vw;
+    width: min(60vw,58rem);
     padding: 5rem 0;
     display: flex;
     flex-direction: column;
@@ -312,20 +311,20 @@ body {
 
 .page-about__collage_4_wrapper {
     background:#D5B3FF;
-    width: 75vw;
-    height: 60vw;
+    width: 52vw;
+    height: 52vw;
     margin: 0 auto;
 }
 
 .page-about__collage_4_wrapper img:nth-child(1) {
-    width: 40%;
+    width: 33%;
     position: absolute;
-    left:6%;
-    top:30%;
+    left:9%;
+    top:32%;
 }
 .page-about__collage_4_wrapper img:nth-child(2) {
     width: 40%;
-    height: 60%;
+    height: 50%;
     position: absolute;
     right:0;
     top:20%;
@@ -460,6 +459,12 @@ body {
     }
 /* footer finish */
 
+@media screen and (min-width:768px){
+    .page-about__header__ableton-logo{
+        width: 335px;
+    }
+}
+
 @media screen and (min-width:1024px){
 
     .primary{
@@ -561,6 +566,18 @@ body {
         line-height: 1.7rem;
     }
 
+    .page-about__collage_3 {
+        width: 70vw;
+    }
+
+    .page-about__collage_4_wrapper {
+        width: 65vw;
+    }
+    
+    .page-about__collage_4_wrapper img:nth-child(2) {
+        width: 40%;
+    }    
+
     /* footer */
 
     .footer {
@@ -624,6 +641,18 @@ body {
     }
 }
 
+@media screen and (min-width:1125px){
+    .body-text h1 {
+        font-size:1.7rem;
+        font-weight:600;
+        letter-spacing:.1rem;
+    }
+    .body-text p {
+        font-size:1rem;
+        font-weight:400;
+    }
+}
+
 @media screen and (min-width:1280px){
     .page-about__collarge_5_wrapper {
         display: flex;
@@ -635,9 +664,13 @@ body {
     }
 
     .body-text {
-        width: 25vw;
+        /* width: 25vw; */
         margin: 0 auto;
         align-self: center;
+    }
+
+    .page-about__collarge_5_wrapper .body-text{
+        width: 25vw;
     }
     
     .page-about__collarge_5_wrapper h1{
