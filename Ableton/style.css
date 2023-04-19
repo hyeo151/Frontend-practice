@@ -13,11 +13,17 @@
 body {
     font-size: 16px;
     background:#F3F3F3;
+    width: 100vw;
+    overflow-x: hidden;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.page {
+    width:100vw;
 }
 
 .main {
-    max-width: 100rem;
-    margin: 0 auto;
     background-color: #fff;
 }
 
@@ -187,171 +193,173 @@ body {
 /* Navigation Finished*/
 
 /* Body */
+
 .page-about__header {
-    background-image: url("img/header.avif");
-    background-color: #eee;
-    width:80vw;
-    height:807px;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    margin: 0 auto;
-    margin-bottom: 8.33333vw;
+    background-image: url(img/header_2.avif);
     min-height: calc(100vh - 120px);
-    position: relative;
+    margin-left: 8.33333vw;
+    margin-right: 8.33333vw;
+    margin-bottom: 8.33333vw;
+    position:relative;
 }
 
-.page-about__header__ableton-logo {
+.page-about__header__ableton-logo{
     position: absolute;
-    width: 238px;
-    height: 81px;
-    top: 46%;
-    left: 33%;
+    top: 50%;
+    left: 50%;
+    width: 215px;
+    height: 52px;
+    transform: translate(-50%, -50%);
 }
 
 .page-about__text {
-    width: 44rem;
-    margin: 0 auto;
-}
-.body-text h1 {
-    font-size: 1.2rem;
-    line-height:1.8rem;
-    font-weight: 500;
-    margin-bottom:1rem;
-}
-.body-text p {
-    font-size: .8rem;
-    line-height:1.4rem;
-    font-weight: 400;
+    margin-left: 8.33333vw;
+    margin-right: 8.33333vw;
+    margin-bottom: 8.33333vw;
 }
 
-.body-text h1 a{
-    text-decoration:none;
+.page-about__text h1{
+    font-size: 1.25rem;
+    margin-bottom: 0.7rem;
+    font-weight: bold;
 }
 
-.image-section {
-    margin: 3rem auto;
-    padding-top: 8.33333vw;
-    padding-bottom: 8.33333vw;
-}
-
-.image-section img{
-    width:100%;
-}
-
-.page-about__media {
-    width: 44rem;
-}
-.page-about__collage {
-    position: relative;
-}
-
-.page-about__collage > img:nth-child(1){
-    position:relative;
-    z-index:1;
-    width: min(45vw,40.5rem);
-    height: min(45vw,40rem);
-    left: 10vw;  
-}
-
-.collage-wrapper{
-    background:#FBFFA7;
-    width: min(58vw,57rem);
-    height: min(62vw,53rem);
-    position: absolute;
-    top:0;
-    right:0;
-}
-.collage-wrapper img{
-    position:absolute;
-    right:5vw;
-    top:min(20vw,16rem);
-    width: 55%;
-} 
-
-
-.page-about__collage_2 {
-    position: relative;
-}
-.page-about__collage_2 > img {
-    position:absolute;
-    top:30%;
-    right:5%;
-    width: min(40vw,41rem);
-}
-
-.collage-wrapper_2 {
-    background: #B6FFC0;
-    width: min(60vw,58rem);
-    padding: 5rem 0;
-    display: flex;
-    flex-direction: column;
-    gap:4rem;
-    align-items:center;
-}
-
-.collage-wrapper_2 img{
-    margin-left:-5rem;
-    width: 65%;
-}
-
-.page-about__collage_3 {
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.page-about__collage_3 img{
-    width: 100%;
-}
-
-.page-about__collage_4 {
-
-    position:relative;
-}
-
-.page-about__collage_4_wrapper {
-    background:#D5B3FF;
-    width: 52vw;
-    height: 52vw;
-    margin: 0 auto;
-}
-
-.page-about__collage_4_wrapper img:nth-child(1) {
-    width: 33%;
-    position: absolute;
-    left:9%;
-    top:32%;
-}
-.page-about__collage_4_wrapper img:nth-child(2) {
-    width: 40%;
-    height: 50%;
-    position: absolute;
-    right:0;
-    top:20%;
-}
-
-.page-about__collarge_5_wrapper{
-    margin: 0 auto;
-    width: 88vw;
-    background: #B1C5FF;
-}
-
-.page-about__collarge_5_wrapper img {
-    width: 100%;
-}
-
-.page-about__collarge_5_wrapper h1 {
-    font-size: 1.3rem;
-    font-weight:500;
-    padding: 4rem;
-    line-height: 2rem;
-}
-
-.page-about__collarge_5_wrapper h1 a {
-    margin-top:1rem;
-    display:inline-block;
+.body-text a {
+    color: blue;
     text-decoration: none;
 }
+
+.page-about__collage{
+    margin-bottom: 8.33333vw;
+}
+
+.page-about__collage--products{
+    padding: 8.33333vw 0;
+    position: relative;
+}
+.page-about__collage--products .page-about__collage__background{
+    position:absolute;
+    width: 58.33333vw;
+    height: 58.33333vw;
+    background-color: #FBFFA7;
+    right:0;
+    top:0;
+    z-index:0;
+}
+
+.page-about__collage--products .page-about__collage__media{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(img/photo-1.jpg);
+    width: 41.66667vw;
+    height: 41.66667vw;
+    margin-left: 8.33333vw;
+    display: inline-block;
+    position:relative;
+    vertical-align: middle;
+}
+
+.page-about__collage--products .page-about__collage__media:last-child{
+    background-image: url(img/photo-2.jpg);
+    width: 33.33333vw;
+    height: 25vw;
+}
+
+.page-about__collage--people {
+    padding: 8.33333vw;
+    position: relative;
+}
+
+.page-about__collage--people .page-about__collage__background {
+    position: absolute;
+    left: 0;
+    top: 0;            
+    width: 58.33333vw;
+    height: 75vw;
+    z-index: 0;
+    background-color: #B6FFC0;
+}
+
+.page-about__collage__container {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+}
+
+.page-about__collage__container__media {
+    width: 33.33333vw;
+    height: 25vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(img/photo-3.jpg);     
+    position: relative;       
+}
+
+.page-about__collage__container__media:last-child {
+    background-image: url(img/photo-4.jpg);
+    margin-top: 8.33333vw;
+}
+
+.page-about__collage--people>.page-about__collage__media {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(img/photo-5.jpg);
+    width: 41.66667vw;
+    height: 41.66667vw;
+    margin-left: 7.23vw;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+}
+
+.page-about__collage--improving {
+    padding-top: 8.33333vw;
+    padding-bottom: 8.33333vw;
+    position: relative;
+}
+
+.page-about__collage--improving .page-about__collage__background{
+    width: 66.66667vw;
+    height: 58.33333vw;
+    background-color: #D5B3FF;
+    position: absolute;
+    top: 0;
+    left: 16.66667vw;
+    z-index: 0;
+}
+
+.page-about__collage--improving .page-about__collage__media {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(img/photo-6-a.jpg);
+    width: 33.33333vw;
+    height: 25vw;
+    margin-left: 8.33333vw;
+    right:0;
+    position: relative;
+
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;    
+}
+
+.page-about__collage--improving .page-about__collage__media:last-child{
+    background-image: url(img/photo-7.jpg);
+    width: 41.66667vw;
+    height: 41.66667vw;
+    margin-left: 15vw;        
+}
+
 /* Body finished */
 
 /* footer */
@@ -372,10 +380,6 @@ body {
         font-size: .9rem;
         font-weight:600;
         margin-bottom:.2rem;
-    }
-
-    .footer > * {
-        /* background: olive; */
     }
 
     .footer div ul {
@@ -459,13 +463,26 @@ body {
     }
 /* footer finish */
 
-@media screen and (min-width:768px){
+@media screen and (min-width: 48em){
     .page-about__header__ableton-logo{
-        width: 335px;
+        width: 26.875rem;
+        height: 6.5rem;
+    }
+
+    .page-about__text{
+        width: 66.66667vw;
+        margin-left:auto;
+        margin-right:auto;
     }
 }
 
-@media screen and (min-width:1024px){
+@media screen and (min-width: 48em){
+    .page-about__text{
+        width: 50vw;
+    }
+}
+
+@media screen and (min-width:64em){
 
     .primary{
         font-size:.9rem;
@@ -566,18 +583,6 @@ body {
         line-height: 1.7rem;
     }
 
-    .page-about__collage_3 {
-        width: 70vw;
-    }
-
-    .page-about__collage_4_wrapper {
-        width: 65vw;
-    }
-    
-    .page-about__collage_4_wrapper img:nth-child(2) {
-        width: 40%;
-    }    
-
     /* footer */
 
     .footer {
@@ -624,7 +629,7 @@ body {
     /* footer End*/
 }
 
-@media screen and (min-width:1080px){
+@media screen and (min-width:67.5em){
     .footer__seperator{
         display: block;
         height: 0;
@@ -641,44 +646,103 @@ body {
     }
 }
 
-@media screen and (min-width:1125px){
-    .body-text h1 {
-        font-size:1.7rem;
-        font-weight:600;
-        letter-spacing:.1rem;
+@media screen and (min-width: 70.25em){
+    .body-text h1{
+        font-size: 1.875rem;
+        line-height: 1.4;
     }
-    .body-text p {
-        font-size:1rem;
-        font-weight:400;
+    .body-text p{
+        font-size: 1.25rem;
+        line-height: 1.5;
     }
 }
 
-@media screen and (min-width:1280px){
-    .page-about__collarge_5_wrapper {
-        display: flex;
-        width: 80vw;
-        height: 40vw;
+@media screen and (min-width: 80em){
+    .page-about__text{
+        width: 50rem;
     }
-    .page-about__collarge_5_wrapper img{
-        width: 50%;
-    }
+}
 
-    .body-text {
-        /* width: 25vw; */
+@media screen and (min-width: 100em){
+    .main {
+        max-width: 100rem;
         margin: 0 auto;
-        align-self: center;
+    }
+    .page {
+        width: 100rem;
+    }
+    .page-about__header {
+        margin: 0 8.33rem 8.33rem 8.33rem;
     }
 
-    .page-about__collarge_5_wrapper .body-text{
-        width: 25vw;
+    .page-about__collage {
+        margin-bottom: 8.333rem;
+    }
+
+    .page-about__collage--products{
+        padding: 8.333rem 0;
+    }
+
+    .page-about__collage--products .page-about__collage__background {
+        width: 58.33rem;
+        height: 58.33rem;
+    }
+
+    .page-about__collage--products .page-about__collage__media{
+        width:41.66rem;
+        height:41.66rem;
+        margin-left:8.333rem;
+    }
+
+    .page-about__collage--products .page-about__collage__media:last-child{
+        width: 33.33rem;
+        height: 25rem;
+    }
+
+    .page-about__collage--people {
+        padding:8.333rem;
+    }
+
+    .page-about__collage--people .page-about__collage__background {
+        width: 58.33rem;
+        height: 75rem;
+    }
+
+    .page-about__collage--people .page-about__collage__container__media {
+        height: 25rem;
+        width: 33.33rem;
+    }
+
+    .page-about__collage--people .page-about__collage__container__media:last-child {
+        margin-top: 8.33rem;
+    }
+
+    .page-about__collage--people>.page-about__collage__media {
+        height: 41.66rem;
+        width: 41.66rem;
+        margin-left: 8rem;
+    }
+
+    .page-about__collage--improving {
+        padding-top: 8.33333rem;
+        padding-bottom: 8.33333rem;
     }
     
-    .page-about__collarge_5_wrapper h1{
-        font-weight: 600;
-        font-size: 1.5rem;
-        letter-spacing: .1rem;
-        line-height: 2.5rem;
-        padding:0;
-        margin:0;
+    .page-about__collage--improving .page-about__collage__background{
+        width: 66.66667rem;
+        height: 58.33333rem;
+        left: 16.66667rem;
     }
+    
+    .page-about__collage--improving .page-about__collage__media {
+        width: 33.33333rem;
+        height: 25rem;
+        margin-left: 8.33333rem;
+    }
+    
+    .page-about__collage--improving .page-about__collage__media:last-child{
+        width: 41.6666rem;
+        height: 41.6666rem;
+        margin-left: 16.3rem;      
+    }    
 }
