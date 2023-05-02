@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="setup.css" />
+    <title>Bonsai-pricing</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Gellix;
+      }
+      .container {
+        background-color: aqua;
+        max-width: 1064px;
+      }
+      .card-container {
+        display: flex;
+        gap: 2rem;
+      }
+      .card {
+        --card-space: 3rem;
+        border: 3px solid black;
+        min-width: 300px;
+        height: 300px;
+        padding: var(--card-space);
+        border-radius: 10px;
+        position: relative;
+        display: inline-flex; /* Add this property */
+        flex-direction: column; /* Add this property */
+      }
+      h1 {
+        text-align: center;
+        line-height: 28px;
+        margin-bottom: 40px;
+        font-weight: 600;
+        font-style: normal;
+        color: var(--font-color-green-500);
+      }
+      h2 {
+        margin-bottom: 1rem;
+      }
+      br {
+        line-height: 0;
+      }
+      .price {
+        font-weight: 600;
+        right: 0;
+        bottom: 0;
+        margin-right: var(--card-space);
+        margin-bottom: var(--card-space);
+        font-size: 1.5rem;
+        position: absolute;
+      }
+      .learn-more {
+        margin-top: 0.5rem;
+        display: inline-block;
+      }
+      /* Add this code inside the <style> section */
+      /* @media (max-width: 900px) {
+        .card-container {
+          overflow-x: scroll;
+          flex-wrap: nowrap;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Take it to the <br />
+        next level with add-ons
+      </h1>
+      <div class="card-container">
+        <div class="card">
+          <h2>Collaborators</h2>
+          <p>
+            Invite other users to specific projects for limited access and
+            functionality.
+          </p>
+          <p class="price">Free</p>
+        </div>
+        <div class="card">
+          <h2>Partners</h2>
+          <p>
+            Invite other users for full account access and company management.
+          </p>
+          <p class="price">$9 <span>/month</span></p>
+        </div>
+        <div class="card">
+          <h2>Tax Assistant</h2>
+          <p>
+            Track expenses, identify write-offs, and estimate quarterly taxes
+            easily.
+          </p>
+          <a class="learn-more" href="#">Learn more</a>
+          <p class="price">$10 <span>/month</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
