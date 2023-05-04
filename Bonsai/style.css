@@ -98,15 +98,20 @@ svg {
 }
 
 /*
-    7. Remove built-in form typography styles
-  */
+  7. Remove built-in form typography styles
+*/
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
-
+/*
+  8.Remove default styles for ul and a
+*/
+ul {
+  list-style: none;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -155,7 +160,7 @@ header {
 }
 .nav-wrapper {
   padding: 0 1rem;
-  margin-top: 1.4rem;
+  margin-top: 1.3rem;
 }
 .desktop-nav-wrapper {
   --menu-gap: 1.5rem;
@@ -182,21 +187,26 @@ header {
   color: var(--font-color-green-300);
   font-weight: 500;
 }
-.sign-up {
-  /* background-color: orange; */
+.desktop-main-nav nav ul li:hover {
+  color: var(--button-color-100);
 }
-
+.sign-up {
+}
+.sign-up a:first-child {
+  margin-right: 0.6rem;
+  font-weight: 500;
+}
 .sign-up a:last-child {
   background-color: var(--button-color-100);
   color: white;
   padding: 10px 20px 12px;
-  border-radius: 30%;
+  border-radius: 36px;
+  font-weight: 500;
 }
-
 .line {
   width: 100%;
   border-top: 0.5px solid var(--line-color);
-  margin-top: 1rem;
+  margin-top: 1.3rem;
 }
 .desktop-secondary-nav ul {
   display: flex;
@@ -206,9 +216,27 @@ header {
   font-weight: 500;
   gap: var(--menu-gap);
 }
-
 .mobile-nav-wrapper {
   display: none;
+}
+
+.product-drop-menu {
+  display: flex;
+  background-color: yellow;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  margin-top: 23px;
+  justify-content: center;
+  gap: 5rem;
+}
+.product-drop-menu ul h2,
+.product-drop-menu div h2 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+.product-drop-menu div img {
+  width: 8rem;
 }
 
 @media screen and (max-width: 62rem) {
