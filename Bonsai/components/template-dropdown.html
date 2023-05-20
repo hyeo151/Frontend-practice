@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      body {
+        font-family: "Gellix", sans-serif;
+      }
+      .container {
+        width: 100%;
+        position: fixed;
+        box-shadow: 0 24px 40px -20px rgba(0, 0, 0, 0.2);
+      }
+      .menu-dropdown {
+        display: flex;
+        max-width: 1360px;
+        margin: 0 auto;
+        border-top: 2px solid var(--line-color);
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 30px;
+      }
+
+      .menu-dropdown_col1 {
+        border-right: 2px solid var(--line-color);
+        padding-right: 10px;
+        padding-top: 10px;
+        max-width: 300px;
+        flex: 1;
+
+        color: var(--font-color-green-600);
+      }
+      .menu-dropdown_col1 ul {
+        list-style-type: none;
+      }
+      .menu-dropdown_col1 ul li {
+        padding: 8px 16px;
+        cursor: pointer;
+      }
+      .menu-dropdown_col1 ul li:hover,
+      .menu-dropdown__col2_body ul li:hover a {
+        color: var(--font-color-green-200);
+      }
+      .menu-dropdown_col1_tab.active p {
+        background-image: url("img/arrow-right.svg");
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-size: 18px;
+        background-position-y: 3px;
+      }
+      .menu-dropdown_col1_tab.active {
+        color: var(--font-color-green-200);
+        background-color: #f2f7f2;
+        border-radius: 3px;
+      }
+      .menu-dropdown_col2 {
+        padding: 28px 60px;
+        width: 100%;
+        flex: 1;
+      }
+      .menu-dropdown_col2_content {
+        display: none;
+        animation: moving 1s ease;
+        color: var(--font-color-green-300);
+      }
+      @keyframes moving {
+        from {
+          /* transform: translateX(50px); */
+          opacity: 0;
+        }
+        to {
+          /* transform: translateX(0px); */
+          opacity: 1;
+        }
+      }
+      .content_box .content.active {
+        display: block;
+      }
+      .menu-dropdown_col2_content.active {
+        display: block;
+      }
+      .menu-dropdown__col2_title {
+        padding-bottom: 14px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--font-color-green-300);
+        opacity: 0.5;
+      }
+      .menu-dropdown__col2_body {
+        display: flex;
+      }
+      .menu-dropdown__col2_body ul {
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        flex: 1;
+      }
+      .menu-dropdown__col2_body ul li {
+        padding-bottom: 10px;
+      }
+      .menu-dropdown__col2_body ul li:hover {
+        cursor: pointer;
+      }
+      .menu-dropdown__col2_body ul li a {
+        text-decoration: none;
+      }
+      .menu-dropdown__col2_footer {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .menu-dropdown__col2_footer a {
+        color: var(--font-color-green-200);
+        position: relative;
+      }
+      .menu-dropdown__col2_footer a:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: var(--font-color-green-200);
+        transform-origin: bottom left;
+        transition: transform 0.5s ease-out;
+        transform: scaleX(1);
+      }
+      .menu-dropdown__col2_footer a:hover:after {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+      }
+
+      /* menu-dropdown-panel */
+      .menu-dropdown-panel {
+        display: flex;
+        width: 100%;
+        padding: 46px 0;
+        color: var(--font-color-green-300);
+        justify-content: space-between;
+      }
+      .menu-dropdown-panel > * {
+        width: 100%;
+        max-width: 274px;
+      }
+      .menu-dropdown-panel ul {
+        list-style-type: none;
+      }
+      .menu-dropdown-panel ul li {
+        padding: 6px 0;
+        cursor: pointer;
+      }
+      .menu-dropdown-panel ul li:hover a {
+        color: green;
+      }
+      .menu-dropdown-panel > * > h3 {
+        margin-bottom: 10px;
+        color: var(--font-color-green-500);
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .menu-dropdown-panel__image-wrapper {
+        background-color: #f2f7f2;
+        width: 128px;
+        height: 82px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        overflow: hidden;
+      }
+      .menu-dropdown-panel__image-wrapper img {
+        width: 95px;
+        border-top-left-radius: 10px;
+        box-shadow: -7px 19px 20px -4px rgba(0, 0, 0, 0.11);
+      }
+      .menu-dropdown-panel__image-block p {
+        margin-top: 8px;
+      }
+      .menu-dropdown-panel__image-block a {
+        margin-top: 10px;
+        font-size: 14px;
+        color: var(--font-color-green-200);
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+      }
+      .menu-dropdown-panel__image-block a:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 3px;
+        left: 0;
+        background-color: var(--font-color-green-200);
+        transform-origin: bottom left;
+        transition: transform 0.5s ease-out;
+        transform: scaleX(1);
+      }
+
+      .menu-dropdown-panel__image-block a:hover:after {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+      }
+
+      .spacer {
+        padding-top: 100rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="menu-dropdown">
+        <div class="menu-dropdown-panel">
+          <ul>
+            <h3>Client Management</h3>
+            <li><a href="#">CRM</a></li>
+            <li><a href="#">Scheduling</a></li>
+            <li><a href="#">Proposals</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">Forms</a></li>
+          </ul>
+          <ul>
+            <h3>Project Management</h3>
+            <li><a href="#">Time tracking</a></li>
+            <li><a href="#">Tasks</a></li>
+            <li><a href="#">File sharing</a></li>
+            <li><a href="#">Client portal</a></li>
+            <li><a href="#">Collaboration</a></li>
+          </ul>
+          <ul>
+            <h3>Financial Management</h3>
+            <li><a href="#">Invocing</a></li>
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">Accounting</a></li>
+            <li><a href="#">Taxes</a></li>
+            <li><a href="#">Banking</a></li>
+          </ul>
+          <div class="menu-dropdown-panel__image-block">
+            <h3>What's new</h3>
+            <div class="menu-dropdown-panel__image-wrapper">
+              <img src="img/scheduling-preview.jpg" />
+            </div>
+            <p>Branded scheduling portal</p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <div class="menu-dropdown">
+        <div class="menu-dropdown-panel">
+          <ul>
+            <h3>Learn</h3>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+          <ul>
+            <h3>Tools</h3>
+            <li><a href="#">Contract Maker</a></li>
+            <li><a href="#">Self-Employed Taxes Hub</a></li>
+            <li><a href="#">Freelance Rates Explorer</a></li>
+          </ul>
+          <ul></ul>
+          <ul></ul>
+        </div>
+      </div>
+      <div class="menu-dropdown">
+        <div class="menu-dropdown-panel">
+          <ul>
+            <h3>Business Services</h3>
+            <li><a href="#">Consulting</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Recruiting</a></li>
+            <li><a href="#">Virtual Assistant</a></li>
+            <li><a href="#">More...</a></li>
+          </ul>
+          <ul>
+            <h3>Creative and Digital</h3>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Photography</a></li>
+            <li><a href="#">Software Development</a></li>
+            <li><a href="#">Writing</a></li>
+            <li><a href="#">More...</a></li>
+          </ul>
+          <ul>
+            <h3>Professional Services</h3>
+            <li><a href="#">Coaching</a></li>
+            <li><a href="#">Architecture</a></li>
+            <li><a href="#">Accounting</a></li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">More...</a></li>
+          </ul>
+          <ul>
+            <h3>Other services</h3>
+            <li><a href="#">Event Planning</a></li>
+            <li><a href="#">Interior Design</a></li>
+            <li><a href="#">Real-Estate</a></li>
+            <li><a href="#">More...</a></li>
+          </ul>
+        </div>
+      </div> -->
+      <div class="menu-dropdown">
+        <div class="menu-dropdown_col1">
+          <ul class="menu-dropdown_col1_tabs">
+            <li class="menu-dropdown_col1_tab active">
+              <p>Contract Templates</p>
+            </li>
+            <li class="menu-dropdown_col1_tab"><p>Proposal Templates</p></li>
+            <li class="menu-dropdown_col1_tab"><p>Invoice Templates</p></li>
+            <li class="menu-dropdown_col1_tab"><p>Quote Templates</p></li>
+            <li class="menu-dropdown_col1_tab">
+              <p>Scope of Work Templates</p>
+            </li>
+            <li class="menu-dropdown_col1_tab"><p>Brief Templates</p></li>
+            <li class="menu-dropdown_col1_tab"><p>Form Templates</p></li>
+          </ul>
+        </div>
+        <div class="menu-dropdown_col2">
+          <div class="menu-dropdown_col2_content active">
+            <div class="menu-dropdown__col2_title">
+              Featured contract templates
+            </div>
+            <div class="menu-dropdown__col2_body">
+              <ul>
+                <li>
+                  <a href="">Client Contract Template</a>
+                </li>
+                <li>
+                  <a href="">Free Design Contract Template</a>
+                </li>
+                <li>
+                  <a href="">Free Freelance Contract Template</a>
+                </li>
+                <li>
+                  <a href="">Free Hourly Rate Contract Template</a>
+                </li>
+                <li>
+                  <a href="">Free Non-Disclosure Agreement Template</a>
+                </li>
+                <li>
+                  <a href="">Free Project Management Agreement Template</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="">Contruction Contract Template</a>
+                </li>
+                <li>
+                  <a href="">Free Employement Contract Template</a>
+                </li>
+                <li>
+                  <a href="">Free General Contract Templates</a>
+                </li>
+                <li>
+                  <a href="">Free Independent Contractor Agreement Template</a>
+                </li>
+                <li>
+                  <a href="">Free Online Contract</a>
+                </li>
+                <li>
+                  <a href="">Free Service Agreement Template</a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-dropdown__col2_footer">
+              <a href="">See all templates</a>
+            </div>
+          </div>
+          <div class="menu-dropdown_col2_content">
+            <div class="menu-dropdown__col2_title">
+              Featured proposal templates
+            </div>
+            <div class="menu-dropdown__col2_body">
+              <ul>
+                <li>
+                  <a href="">Accounting Request for Proposal</a>
+                </li>
+                <li>
+                  <a href=""
+                    >Free Collaboration Proposal Template(Partnership
+                    Proposal)</a
+                  >
+                </li>
+                <li>
+                  <a href="">Free Creative Proposal Template</a>
+                </li>
+                <li>
+                  <a href="">Free Freelancer Bid Proposal Template</a>
+                </li>
+                <li>
+                  <a href="">Free Professional Proposal Template</a>
+                </li>
+                <li>
+                  <a href="">Free Services Proposal Template</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href=""> Free Bid Proposal Template</a>
+                </li>
+                <li>
+                  <a href="">Free Contractor Proposal Template</a>
+                </li>
+                <li>
+                  <a href=""> Free Freelance Proposal Template</a>
+                </li>
+                <li>
+                  <a href=""> Free Monthly Retainer Proposal Template</a>
+                </li>
+                <li>
+                  <a href=""> Free Property Management Proposal Template</a>
+                </li>
+                <li>
+                  <a href=""> Free Simple Proposal Template</a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-dropdown__col2_footer">
+              <a href="">See all templates</a>
+            </div>
+          </div>
+          <div class="menu-dropdown_col2_content">
+            <div class="menu-dropdown__col2_title">
+              Featured invoice templates
+            </div>
+            <div class="menu-dropdown__col2_body">
+              <ul>
+                <li>
+                  <a href="">Free Basic Invoice Templates</a>
+                </li>
+                <li>
+                  <a href="">Free Contractor Invoice Template</a>
+                </li>
+                <li>
+                  <a href="">Free Freelance Invoice Template</a>
+                </li>
+                <li>
+                  <a href="">Free Online Invoice (with our Invoice Maker)</a>
+                </li>
+                <li>
+                  <a href="">Free Retainer Invoice Template</a>
+                </li>
+                <li>
+                  <a href="">Free Work Invoice Template</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href=""> Free Blank Invoice Template</a>
+                </li>
+                <li>
+                  <a href="">Free Custom Invoice Template</a>
+                </li>
+                <li>
+                  <a href=""> Free Invoice Template for Email</a>
+                </li>
+                <li>
+                  <a href=""> Free Proforma Invoice Template</a>
+                </li>
+                <li>
+                  <a href=""> Free Sample Invoice Template (Word)</a>
+                </li>
+                <li>
+                  <a href=""> Online Invoice Generator & Invoice Template</a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-dropdown__col2_footer">
+              <a href="">See all templates</a>
+            </div>
+          </div>
+          <div class="menu-dropdown_col2_content">
+            <div class="menu-dropdown__col2_title">
+              Featured quote templates
+            </div>
+            <div class="menu-dropdown__col2_body">
+              <ul>
+                <li><a href="">Blank Quote Template</a></li>
+                <li>
+                  <a href="">Editable Quotation Template</a>
+                </li>
+                <li>
+                  <a href="">Free Contractor Quote Template</a>
+                </li>
+                <li>
+                  <a href="">Free Sample Quotation Template</a>
+                </li>
+                <li>
+                  <a href="">Online Quote Template</a>
+                </li>
+                <li>
+                  <a href="">Simple Quotation Template</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="">Creative Quotation Template</a>
+                </li>
+                <li>
+                  <a href="">Formal Quote Template</a>
+                </li>
+                <li>
+                  <a href="">Free Freelance Quotation Template</a>
+                </li>
+                <li>
+                  <a href=""> Free Service Quote Template</a>
+                </li>
+                <li>
+                  <a href=""> Price Quote Template</a>
+                </li>
+                <li>
+                  <a href="">Work Quote Template</a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-dropdown__col2_footer">
+              <a href="">See all templates</a>
+            </div>
+          </div>
+          <div class="menu-dropdown_col2_content">
+            <div class="menu-dropdown__col2_title">
+              Featured scope of work templates
+            </div>
+            <div class="menu-dropdown__col2_body">
+              <ul>
+                <li>
+                  <a href="">Construction Scope of Work Template</a>
+                </li>
+                <li>
+                  <a href="">Free Consultant Statement of Work Template</a>
+                </li>
+                <li>
+                  <a href="">Free SOW for Software Development</a>
+                </li>
+                <li>
+                  <a href="">Free Statement of Work Contract Template</a>
+                </li>
+                <li>
+                  <a href="">Freelance Statement of Work Template</a>
+                </li>
+                <li>
+                  <a href="">Project Scope Of Work Template</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="">Contractor Statement of Work Template</a>
+                </li>
+                <li>
+                  <a href="">Free Digital Marketing Scope of Work Template</a>
+                </li>
+                <li>
+                  <a href="">Free Statement of Work (PDF)</a>
+                </li>
+                <li>
+                  <a href="">
+                    Free Website Development Scope of Work Template</a
+                  >
+                </li>
+                <li>
+                  <a href=""> Interior Design Scope of Work Template</a>
+                </li>
+                <li>
+                  <a href="">Remodel Scope Of Work Template</a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-dropdown__col2_footer">
+              <a href="">See all templates</a>
+            </div>
+          </div>
+          <div class="menu-dropdown_col2_content">
+            <div class="menu-dropdown__col2_title">
+              Featured brief templates
+            </div>
+            <div class="menu-dropdown__col2_body">
+              <ul>
+                <li><a href="">Creative Brief (Example)</a></li>
+                <li>
+                  <a href="">Free Client Brief Template</a>
+                </li>
+                <li><a href="">Free Consulting Brief</a></li>
+                <li>
+                  <a href="">Free Creative Brief Sample</a>
+                </li>
+                <li>
+                  <a href="">Free Creative Design Brief</a>
+                </li>
+                <li>
+                  <a href="">Free Project Brief Template</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="">Free Brief Template (Word)</a>
+                </li>
+                <li>
+                  <a href="">Free Concept Brief Template</a>
+                </li>
+                <li>
+                  <a href="">Free Creative Brief (with Generator)</a>
+                </li>
+                <li>
+                  <a href="">Free Creative Brief Template (Word)</a>
+                </li>
+                <li>
+                  <a href="">Free Product Brief Template</a>
+                </li>
+                <li>
+                  <a href="">Free Strategy Brief</a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-dropdown__col2_footer">
+              <a href="">See all templates</a>
+            </div>
+          </div>
+          <div class="menu-dropdown_col2_content">
+            <div class="menu-dropdown__col2_title">Featured form templates</div>
+            <div class="menu-dropdown__col2_body">
+              <ul>
+                <li>
+                  <a href="">Business Client Intake Form</a>
+                </li>
+                <li>
+                  <a href="">Client Contact Form Template</a>
+                </li>
+                <li>
+                  <a href="">Client Feedback Form</a>
+                </li>
+                <li>
+                  <a href="">Client Intake Form</a>
+                </li>
+                <li>
+                  <a href="">Free Portfolio Contact Page</a>
+                </li>
+                <li>
+                  <a href="">Project Intake Form</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="">Business Intake Form</a>
+                </li>
+                <li>
+                  <a href="">Client Enrollment Form</a>
+                </li>
+                <li>
+                  <a href="">Client Info Form</a>
+                </li>
+                <li>
+                  <a href="">Comprehensive Client Form</a>
+                </li>
+                <li>
+                  <a href="">Marketing Client Intake Form</a>
+                </li>
+                <li>
+                  <a href="">Website Intake Form</a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-dropdown__col2_footer">
+              <a href="">See all templates</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spacer">ss</div>
+    <script>
+      const tabs = document.querySelectorAll(".menu-dropdown_col1_tab");
+      const all_content = document.querySelectorAll(
+        ".menu-dropdown_col2_content"
+      );
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((tab) => {
+            tab.classList.remove("active");
+          });
+          tab.classList.add("active");
+          all_content.forEach((content) => {
+            content.classList.remove("active");
+          });
+          all_content[index].classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

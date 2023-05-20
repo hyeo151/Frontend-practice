@@ -4,80 +4,759 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <script src="script.js" defer></script>
+    <title>Bonsai - Pricing</title>
   </head>
   <body>
-    <div class="page">
-      <header>
-        <div class="nav-wrapper">
-          <div class="desktop-nav-wrapper">
-            <div class="desktop-main-nav">
-              <img class="main-nav-logo" src="img/brand.svg" alt="" />
-              <nav>
-                <ul>
-                  <li><a href="#">Product</a></li>
-                  <li><a href="#">Industries</a></li>
-                  <li><a href="#">Templates</a></li>
-                  <li><a href="#">Pricing</a></li>
-                  <li><a href="#">Resources</a></li>
-                  <li><a href="#">Reviews</a></li>
+    <header>
+      <div class="nav-bar-container">
+        <div class="desktop-nav">
+          <div class="first-nav-bar line-bottom">
+            <div class="nav-bar-brand">
+              <a href="#">
+                <img src="./img/brand.svg" alt="" />
+              </a>
+            </div>
+            <div class="nav-menu-wrapper">
+              <div class="first-nav-menu">
+                <ul class="first-nav-menu-list">
+                  <li class="first-nav-menu-list-item">
+                    <div class="first-nav-menu-title">Product</div>
+                    <div class="menu-dropdown-container">
+                      <div class="menu-dropdown">
+                        <div class="menu-dropdown-panel">
+                          <ul>
+                            <h3>Client Management</h3>
+                            <li><a href="#">CRM</a></li>
+                            <li><a href="#">Scheduling</a></li>
+                            <li><a href="#">Proposals</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Forms</a></li>
+                          </ul>
+                          <ul>
+                            <h3>Project Management</h3>
+                            <li><a href="#">Time tracking</a></li>
+                            <li><a href="#">Tasks</a></li>
+                            <li><a href="#">File sharing</a></li>
+                            <li><a href="#">Client portal</a></li>
+                            <li><a href="#">Collaboration</a></li>
+                          </ul>
+                          <ul>
+                            <h3>Financial Management</h3>
+                            <li><a href="#">Invocing</a></li>
+                            <li><a href="#">Payments</a></li>
+                            <li><a href="#">Accounting</a></li>
+                            <li><a href="#">Taxes</a></li>
+                            <li><a href="#">Banking</a></li>
+                          </ul>
+                          <div class="menu-dropdown-panel__image-block">
+                            <h3>What's new</h3>
+                            <div class="menu-dropdown-panel__image-wrapper">
+                              <img src="img/scheduling-preview.jpg" />
+                            </div>
+                            <p>Branded scheduling portal</p>
+                            <a href="#">Learn more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="first-nav-menu-list-item">
+                    <div class="first-nav-menu-title">Industries</div>
+                    <div class="menu-dropdown-container">
+                      <div class="menu-dropdown">
+                        <div class="menu-dropdown-panel">
+                          <ul>
+                            <h3>Business Services</h3>
+                            <li><a href="#">Consulting</a></li>
+                            <li><a href="#">Marketing</a></li>
+                            <li><a href="#">Recruiting</a></li>
+                            <li><a href="#">Virtual Assistant</a></li>
+                            <li><a href="#">More...</a></li>
+                          </ul>
+                          <ul>
+                            <h3>Creative and Digital</h3>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Photography</a></li>
+                            <li><a href="#">Software Development</a></li>
+                            <li><a href="#">Writing</a></li>
+                            <li><a href="#">More...</a></li>
+                          </ul>
+                          <ul>
+                            <h3>Professional Services</h3>
+                            <li><a href="#">Coaching</a></li>
+                            <li><a href="#">Architecture</a></li>
+                            <li><a href="#">Accounting</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">More...</a></li>
+                          </ul>
+                          <ul>
+                            <h3>Other services</h3>
+                            <li><a href="#">Event Planning</a></li>
+                            <li><a href="#">Interior Design</a></li>
+                            <li><a href="#">Real-Estate</a></li>
+                            <li><a href="#">More...</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="first-nav-menu-list-item">
+                    <div class="first-nav-menu-title"><p>Templates</p></div>
+                    <div class="menu-dropdown-container">
+                      <div class="menu-dropdown">
+                        <div class="menu-dropdown-tabPanel">
+                          <div class="menu-dropdown_col1">
+                            <ul class="menu-dropdown_col1_tabs">
+                              <li class="menu-dropdown_col1_tab active">
+                                <p>Contract Templates</p>
+                              </li>
+                              <li class="menu-dropdown_col1_tab">
+                                <p>Proposal Templates</p>
+                              </li>
+                              <li class="menu-dropdown_col1_tab">
+                                <p>Invoice Templates</p>
+                              </li>
+                              <li class="menu-dropdown_col1_tab">
+                                <p>Quote Templates</p>
+                              </li>
+                              <li class="menu-dropdown_col1_tab">
+                                <p>Scope of Work Templates</p>
+                              </li>
+                              <li class="menu-dropdown_col1_tab">
+                                <p>Brief Templates</p>
+                              </li>
+                              <li class="menu-dropdown_col1_tab">
+                                <p>Form Templates</p>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="menu-dropdown_col2">
+                            <div class="menu-dropdown_col2_content active">
+                              <div class="menu-dropdown__col2_title">
+                                Featured contract templates
+                              </div>
+                              <div class="menu-dropdown__col2_body">
+                                <ul>
+                                  <li>
+                                    <a href="">Client Contract Template</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Free Design Contract Template</a>
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Freelance Contract Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Hourly Rate Contract Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Non-Disclosure Agreement Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Project Management Agreement
+                                      Template</a
+                                    >
+                                  </li>
+                                </ul>
+                                <ul>
+                                  <li>
+                                    <a href="">Contruction Contract Template</a>
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Employement Contract Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free General Contract Templates</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Independent Contractor Agreement
+                                      Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="">Free Online Contract</a>
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Service Agreement Template</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="menu-dropdown__col2_footer">
+                                <a href="">See all templates</a>
+                              </div>
+                            </div>
+                            <div class="menu-dropdown_col2_content">
+                              <div class="menu-dropdown__col2_title">
+                                Featured proposal templates
+                              </div>
+                              <div class="menu-dropdown__col2_body">
+                                <ul>
+                                  <li>
+                                    <a href=""
+                                      >Accounting Request for Proposal</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Collaboration Proposal
+                                      Template(Partnership Proposal)</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Creative Proposal Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Freelancer Bid Proposal Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Professional Proposal Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Services Proposal Template</a
+                                    >
+                                  </li>
+                                </ul>
+                                <ul>
+                                  <li>
+                                    <a href=""> Free Bid Proposal Template</a>
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Contractor Proposal Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                      Free Freelance Proposal Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                      Free Monthly Retainer Proposal Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                      Free Property Management Proposal
+                                      Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                      Free Simple Proposal Template</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="menu-dropdown__col2_footer">
+                                <a href="">See all templates</a>
+                              </div>
+                            </div>
+                            <div class="menu-dropdown_col2_content">
+                              <div class="menu-dropdown__col2_title">
+                                Featured invoice templates
+                              </div>
+                              <div class="menu-dropdown__col2_body">
+                                <ul>
+                                  <li>
+                                    <a href="">Free Basic Invoice Templates</a>
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Contractor Invoice Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Freelance Invoice Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Online Invoice (with our Invoice
+                                      Maker)</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Retainer Invoice Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="">Free Work Invoice Template</a>
+                                  </li>
+                                </ul>
+                                <ul>
+                                  <li>
+                                    <a href=""> Free Blank Invoice Template</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Free Custom Invoice Template</a>
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                      Free Invoice Template for Email</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                      Free Proforma Invoice Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                      Free Sample Invoice Template (Word)</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                      Online Invoice Generator & Invoice
+                                      Template</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="menu-dropdown__col2_footer">
+                                <a href="">See all templates</a>
+                              </div>
+                            </div>
+                            <div class="menu-dropdown_col2_content">
+                              <div class="menu-dropdown__col2_title">
+                                Featured quote templates
+                              </div>
+                              <div class="menu-dropdown__col2_body">
+                                <ul>
+                                  <li><a href="">Blank Quote Template</a></li>
+                                  <li>
+                                    <a href="">Editable Quotation Template</a>
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Contractor Quote Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Sample Quotation Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="">Online Quote Template</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Simple Quotation Template</a>
+                                  </li>
+                                </ul>
+                                <ul>
+                                  <li>
+                                    <a href="">Creative Quotation Template</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Formal Quote Template</a>
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Freelance Quotation Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""> Free Service Quote Template</a>
+                                  </li>
+                                  <li>
+                                    <a href=""> Price Quote Template</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Work Quote Template</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="menu-dropdown__col2_footer">
+                                <a href="">See all templates</a>
+                              </div>
+                            </div>
+                            <div class="menu-dropdown_col2_content">
+                              <div class="menu-dropdown__col2_title">
+                                Featured scope of work templates
+                              </div>
+                              <div class="menu-dropdown__col2_body">
+                                <ul>
+                                  <li>
+                                    <a href=""
+                                      >Construction Scope of Work Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Consultant Statement of Work
+                                      Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free SOW for Software Development</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Statement of Work Contract
+                                      Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Freelance Statement of Work Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Project Scope Of Work Template</a
+                                    >
+                                  </li>
+                                </ul>
+                                <ul>
+                                  <li>
+                                    <a href=""
+                                      >Contractor Statement of Work Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Digital Marketing Scope of Work
+                                      Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="">Free Statement of Work (PDF)</a>
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                      Free Website Development Scope of Work
+                                      Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                      Interior Design Scope of Work Template</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Remodel Scope Of Work Template</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="menu-dropdown__col2_footer">
+                                <a href="">See all templates</a>
+                              </div>
+                            </div>
+                            <div class="menu-dropdown_col2_content">
+                              <div class="menu-dropdown__col2_title">
+                                Featured brief templates
+                              </div>
+                              <div class="menu-dropdown__col2_body">
+                                <ul>
+                                  <li>
+                                    <a href="">Creative Brief (Example)</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Free Client Brief Template</a>
+                                  </li>
+                                  <li><a href="">Free Consulting Brief</a></li>
+                                  <li>
+                                    <a href="">Free Creative Brief Sample</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Free Creative Design Brief</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Free Project Brief Template</a>
+                                  </li>
+                                </ul>
+                                <ul>
+                                  <li>
+                                    <a href="">Free Brief Template (Word)</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Free Concept Brief Template</a>
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Creative Brief (with Generator)</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href=""
+                                      >Free Creative Brief Template (Word)</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a href="">Free Product Brief Template</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Free Strategy Brief</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="menu-dropdown__col2_footer">
+                                <a href="">See all templates</a>
+                              </div>
+                            </div>
+                            <div class="menu-dropdown_col2_content">
+                              <div class="menu-dropdown__col2_title">
+                                Featured form templates
+                              </div>
+                              <div class="menu-dropdown__col2_body">
+                                <ul>
+                                  <li>
+                                    <a href="">Business Client Intake Form</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Client Contact Form Template</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Client Feedback Form</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Client Intake Form</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Free Portfolio Contact Page</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Project Intake Form</a>
+                                  </li>
+                                </ul>
+                                <ul>
+                                  <li>
+                                    <a href="">Business Intake Form</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Client Enrollment Form</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Client Info Form</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Comprehensive Client Form</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Marketing Client Intake Form</a>
+                                  </li>
+                                  <li>
+                                    <a href="">Website Intake Form</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="menu-dropdown__col2_footer">
+                                <a href="">See all templates</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="first-nav-menu-list-item">
+                    <div class="first-nav-menu-title">Pricing</div>
+                  </li>
+                  <li class="first-nav-menu-list-item">
+                    <div class="first-nav-menu-title">Resources</div>
+                  </li>
+                  <li class="first-nav-menu-list-item">
+                    <div class="first-nav-menu-title">Reviews</div>
+                    <div class="menu-dropdown-container">
+                      <div class="menu-dropdown">
+                        <div class="menu-dropdown-panel">
+                          <ul>
+                            <h3>Learn</h3>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Help Center</a></li>
+                          </ul>
+                          <ul>
+                            <h3>Tools</h3>
+                            <li><a href="#">Contract Maker</a></li>
+                            <li><a href="#">Self-Employed Taxes Hub</a></li>
+                            <li><a href="#">Freelance Rates Explorer</a></li>
+                          </ul>
+                          <ul></ul>
+                          <ul></ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
-                <div class="sign-up">
-                  <a href="#">Log in</a>
-                  <a href="#">Start free</a>
+              </div>
+              <div class="second-nav-menu">
+                <ul>
+                  <li>
+                    <a href="#" class="button is-small is-text w-button"
+                      >Log in</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="button is-small w-button">Start free</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="second-nav-bar">
+            <ul>
+              <li><a href="#">Small businesses</a></li>
+              <li><a href="">Agencies</a></li>
+              <li><a href="">Freelancers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mobile-nav">
+          <div class="mobile-nav-bar">
+            <div class="mobile-nav-brand">
+              <a href="#"><img src="img/brand.svg" /></a>
+            </div>
+            <div class="mobile-nav-menu-icon">
+              <a href="#"><img src="img/menu.svg" /></a>
+            </div>
+          </div>
+          <div class="mobile-nav-menu-container active">
+            <div class="mobile-nav-menu-wrapper">
+              <div class="mobile-nav-menu line-bottom">
+                <div class="mobile-nav-menu-title">
+                  <p>Product</p>
+                  <div class="mobile-nav-menu-icon-wrapper">
+                    <img src="img/mobile-menu-icon.svg" alt="" />
+                  </div>
                 </div>
-              </nav>
-              <div class="product-drop-menu">
-                <ul>
-                  <h2>Client Management</h2>
-                  <li><a href="">CRM</a></li>
-                  <li><a href="">Scheduling</a></li>
-                  <li><a href="">Proposals</a></li>
-                  <li><a href="">Contacts</a></li>
-                  <li><a href="">Forms</a></li>
-                </ul>
-                <ul>
-                  <h2>Project Management</h2>
-                  <li><a href="">Time tracking</a></li>
-                  <li><a href="">Tasks</a></li>
-                  <li><a href="">File sharing</a></li>
-                  <li><a href="">Client portal</a></li>
-                  <li><a href="">Collaboration</a></li>
-                </ul>
-                <ul>
-                  <h2>Financial Management</h2>
-                  <li><a href="">Invoicing</a></li>
-                  <li><a href="">Payments</a></li>
-                  <li><a href="">Accounting</a></li>
-                  <li><a href="">Taxes</a></li>
-                  <li><a href="">Banking</a></li>
-                </ul>
-                <div>
-                  <h2>What's new</h2>
-                  <img src="img/scheduling-preview.jpg" alt="" />
-                  <p>Branded scheduling portal</p>
-                  <a href="#">Learn more</a>
+                <div class="mobile-nav-menu-dropdown">
+                  <ul>
+                    <li><a href="#">CRM</a></li>
+                    <li><a href="#">Scheduling</a></li>
+                    <li><a href="#">Proposals</a></li>
+                    <li><a href="#">Contracts</a></li>
+                    <li><a href="#">Forms</a></li>
+                    <li><a href="#">Time tracking</a></li>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="#">File sharing</a></li>
+                    <li><a href="#">Client portal</a></li>
+                    <li><a href="#">Collaboration</a></li>
+                    <li><a href="#">Invoicing</a></li>
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Taxes</a></li>
+                    <li><a href="#">Banking</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mobile-nav-menu line-bottom">
+                <div class="mobile-nav-menu-title">
+                  <p>Industries</p>
+                  <div class="mobile-nav-menu-icon-wrapper">
+                    <img src="img/mobile-menu-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="mobile-nav-menu-dropdown">
+                  <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Recruiting</a></li>
+                    <li><a href="#">Virtual Assistant</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Photography</a></li>
+                    <li><a href="#">Software Development</a></li>
+                    <li><a href="#">Writing</a></li>
+                    <li><a href="#">Coaching</a></li>
+                    <li><a href="#">Architecture</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Event Planning</a></li>
+                    <li><a href="#">Interior Design</a></li>
+                    <li><a href="#">Real-Estate</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mobile-nav-menu line-bottom">
+                <div class="mobile-nav-menu-title">
+                  <p>Templates</p>
+                  <div class="mobile-nav-menu-icon-wrapper">
+                    <img src="img/mobile-menu-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="mobile-nav-menu-dropdown">
+                  <ul>
+                    <li><a href="#">Agreements</a></li>
+                    <li><a href="#">Briefs</a></li>
+                    <li><a href="#">Contracts</a></li>
+                    <li><a href="#">Credit notes</a></li>
+                    <li><a href="#">Estimates</a></li>
+                    <li><a href="#">Forms</a></li>
+                    <li><a href="#">Invoices</a></li>
+                    <li><a href="#">Proposals</a></li>
+                    <li><a href="#">Quotes</a></li>
+                    <li><a href="#">Scopes of Work</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mobile-nav-menu line-bottom">
+                <div class="mobile-nav-menu-title direct">
+                  <p>Pricing</p>
+                </div>
+              </div>
+              <div class="mobile-nav-menu line-bottom">
+                <div class="mobile-nav-menu-title">
+                  <p>Resources</p>
+                  <div class="mobile-nav-menu-icon-wrapper">
+                    <img src="img/mobile-menu-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="mobile-nav-menu-dropdown">
+                  <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contract Maker</a></li>
+                    <li><a href="#">Self-Employed Taxes Hub</a></li>
+                    <li><a href="#">Freelance Rates Explorer</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mobile-nav-menu">
+                <div class="mobile-nav-menu-title direct">
+                  <p>Reviews</p>
                 </div>
               </div>
             </div>
-            <div class="line"></div>
-            <div class="desktop-secondary-nav">
-              <ul>
-                <li>Small businesses</li>
-                <li>Agencies</li>
-                <li>Freelancers</li>
-              </ul>
+            <div class="mobile-nav-buttons">
+              <button class="button is-secondary">Login</button>
+              <button class="button">Start free</button>
             </div>
           </div>
-          <div class="mobile-nav-wrapper">
-            <img src="img/brand.svg" alt="" />
-            <img src="img/menu.svg" alt="" />
-          </div>
         </div>
-      </header>
-      <main></main>
-      <footer></footer>
-    </div>
+      </div>
+      <div class="box-shadow"></div>
+    </header>
+    <div class="spacer"></div>
   </body>
 </html>
