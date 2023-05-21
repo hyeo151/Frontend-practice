@@ -56,6 +56,7 @@ header {
   min-height: 70px;
   height: 73px;
   position: fixed;
+  background-color: white;
 }
 
 .nav-bar-container {
@@ -476,6 +477,265 @@ header {
   }
 }
 
+/* section 1 */
+.section-1 {
+  padding-top: 200px;
+  padding-bottom: 120px;
+}
+
+.section-1-container {
+  width: 100%;
+  max-width: 1144px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.section-1-title {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.section-1-title h2 {
+  font-weight: 700;
+  line-height: 100%;
+  font-size: 60px;
+  color: var(--font-color-green-500);
+  text-align: center;
+}
+
+.section-1-switch {
+  margin-top: 30px;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 322px;
+  height: 64px;
+  margin: 0 auto;
+}
+
+label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f5f0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+input {
+  position: absolute;
+  display: none;
+}
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 130px;
+  height: 52px;
+  background-color: #003c2f;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+input:checked ~ .slider::before {
+  transform: translateX(120px);
+  width: 184px;
+  box-shadow: none;
+}
+input:checked ~ .slider .monthly-sub {
+  color: rgb(0, 60, 47);
+}
+input:checked ~ .slider .yearly-sub {
+  color: white;
+}
+.sub {
+  position: absolute;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.monthly-sub {
+  width: 130px;
+  height: 37px;
+  top: 13px;
+  left: 9px;
+  color: white;
+  transition: color 0.3s;
+}
+.yearly-sub {
+  width: 157px;
+  height: 37px;
+  top: 13px;
+  left: 16px;
+  color: rgb(0, 60, 47);
+  gap: 10px;
+  transform: translateX(130px);
+  transition: color 0.3s;
+}
+.yearly-sub span {
+  font-size: 10px;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 50px;
+  color: green;
+  background-color: white;
+}
+.toggle-switch-output div {
+  display: none;
+}
+.toggle-switch-output div.active {
+  display: block;
+}
+
+.section-1-body {
+  margin-top: 90px;
+  position: relative;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 56px 35px 40px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card.highlight::before {
+  position: absolute;
+  content: "Best value for money";
+  top: -33px;
+  left: -7px;
+  width: 104%;
+  height: 107%;
+  border-radius: 12px;
+  background-color: #ee8146;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 2px;
+  z-index: -1;
+}
+.card-header {
+  padding-bottom: 22px;
+}
+.card-header > * {
+  text-align: center;
+}
+
+.card-body {
+  padding-top: 22px;
+}
+
+.card-body ul {
+  list-style-type: none;
+}
+
+.card-body ul li span {
+  margin-left: 21px;
+  color: var(--font-color-green-300);
+}
+
+.card-body ul li::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  background-image: url("img/green_check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card-body-button {
+  padding: 0px 50px;
+  /* height: 100%;
+  display: flex;
+  align-items: self-end; */
+}
+.card-body-button button {
+  width: 100%;
+}
+.card-header-title {
+  margin-bottom: 22px;
+}
+.card-header-fee,
+.card-header-button {
+  margin-bottom: 9px;
+}
+
+.card-header-title h3,
+.card-header-fee p {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--font-color-green-500);
+}
+
+.card-header-fee p span {
+  color: var(--font-color-green-300);
+  font-size: 16px;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+.card-header-fee p span:first-child {
+  color: var(--font-color-green-500);
+  opacity: 1;
+  margin-right: 5px;
+}
+
+.card-header-text p {
+  font-size: 14px;
+  line-height: 125%;
+  font-weight: 500;
+  color: var(--font-color-green-300);
+}
+
+.card-body {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--font-color-green-500);
+  line-height: 150%;
+}
+
+.card-body-button {
+  margin-top: 42px;
+}
+
+.card-body ul li {
+  padding: 5px;
+}
+
+.subscription {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.8s;
+  position: absolute;
+}
+.subscription.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* .card-body-button {
+  margin-top: 20px;
+} */
 /* Spacer */
 .spacer {
   padding-top: 100rem;

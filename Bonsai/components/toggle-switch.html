@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --light: #d8dbe0;
+        --dark: #f0f5f0;
+        --link: rgb(27, 129, 112);
+        --link-hover: rgb(24, 94, 82);
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      .toggle-switch {
+        position: relative;
+        width: 322px;
+        height: 64px;
+      }
+
+      label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #f0f5f0;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+
+      input {
+        position: absolute;
+        display: none;
+      }
+
+      .slider {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+      }
+
+      .slider::before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 8px;
+        width: 130px;
+        height: 52px;
+        background-color: #003c2f;
+        border-radius: 50px;
+        transition: 0.3s;
+      }
+
+      input:checked ~ .slider::before {
+        transform: translateX(120px);
+        width: 184px;
+        box-shadow: none;
+      }
+
+      input:checked ~ .slider .monthly-sub {
+        color: rgb(0, 60, 47);
+      }
+      input:checked ~ .slider .yearly-sub {
+        color: white;
+      }
+      .sub {
+        position: absolute;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+      .monthly-sub {
+        width: 130px;
+        height: 37px;
+        top: 13px;
+        left: 9px;
+        color: white;
+        transition: color 0.3s;
+      }
+      .yearly-sub {
+        width: 157px;
+        height: 37px;
+        top: 13px;
+        left: 16px;
+        color: rgb(0, 60, 47);
+        gap: 10px;
+        transform: translateX(130px);
+        transition: color 0.3s;
+      }
+      .yearly-sub span {
+        font-size: 10px;
+        padding: 5px 10px;
+        font-weight: bold;
+        border-radius: 50px;
+        color: green;
+        background-color: white;
+      }
+      .toggle-switch-output div {
+        display: none;
+      }
+      .toggle-switch-output div.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toggle-switch">
+      <label>
+        <input type="checkbox" />
+        <span class="slider">
+          <div class="monthly-sub sub">Monthly</div>
+          <div class="yearly-sub sub">
+            Yearly <span>2 months for free</span>
+          </div>
+        </span>
+      </label>
+    </div>
+
+    <div class="toggle-switch-output">
+      <div class="active">Monthly</div>
+      <div>Yearly</div>
+    </div>
+
+    <script>
+      document
+        .querySelector(".toggle-switch input")
+        .addEventListener("input", (e) => {
+          const toggleOutput = document.querySelectorAll(
+            ".toggle-switch-output div"
+          );
+          toggleOutput.forEach((item) => {
+            item.classList.toggle("active");
+          });
+        });
+    </script>
+  </body>
+</html>
