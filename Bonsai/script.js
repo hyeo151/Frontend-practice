@@ -14,10 +14,11 @@ tabs.forEach((tab, index) => {
   });
 });
 
-var prevScrollpos = window.pageYOffset;
+var offset = 100;
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+
+  if (currentScrollPos < offset) {
     document.querySelector(".second-nav-bar").classList.remove("is-scrolled");
     document.querySelector(".box-shadow").classList.remove("is-scrolled");
   } else {
@@ -53,3 +54,12 @@ collapsible.forEach((col) => {
     }
   });
 });
+
+document
+  .querySelector(".toggle-switch input")
+  .addEventListener("input", (e) => {
+    const toggleOutput = document.querySelectorAll(".subscription");
+    toggleOutput.forEach((item) => {
+      item.classList.toggle("active");
+    });
+  });

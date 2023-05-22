@@ -57,6 +57,7 @@ header {
   height: 73px;
   position: fixed;
   background-color: white;
+  z-index: 2;
 }
 
 .nav-bar-container {
@@ -336,7 +337,7 @@ header {
 /* second-nav-bar Styling */
 .second-nav-bar {
   position: relative;
-  transition: transform 0.5s, opacity 0.3s;
+  transition: transform 0.4s, opacity 0.3s;
 }
 .second-nav-bar.is-scrolled {
   transform: translateY(-150px);
@@ -395,16 +396,19 @@ header {
   width: 100%;
   top: -100%;
   left: 0;
-  transition: top 0.5s, opacity 0.3s;
-  opacity: 0;
+  transition: top 0.5s, opacity 0.3s, visible 0.3s;
   padding: 0 var(--mobile-nav-side-padding);
   padding: 20px 40px;
+  opacity: 0;
+  background-color: white;
+  z-index: -2;
 }
 .mobile-nav-menu-container.active {
-  top: 78px;
+  top: 72px;
   opacity: 1;
   height: 80vh;
   overflow: scroll;
+  z-index: 1;
 }
 
 .mobile-nav-menu-wrapper {
@@ -614,11 +618,12 @@ input:checked ~ .slider .yearly-sub {
   display: flex;
   flex-direction: column;
   height: 100%;
+  flex: 1 1 0;
 }
 
 .card.highlight::before {
   position: absolute;
-  content: "Best value for money";
+  content: "Most popular";
   top: -33px;
   left: -7px;
   width: 104%;
@@ -630,6 +635,10 @@ input:checked ~ .slider .yearly-sub {
   font-size: 14px;
   padding-top: 2px;
   z-index: -1;
+}
+
+.card.highlight.best-value::before {
+  content: "Best value for money";
 }
 .card-header {
   padding-bottom: 22px;
@@ -647,7 +656,7 @@ input:checked ~ .slider .yearly-sub {
 }
 
 .card-body ul li span {
-  margin-left: 21px;
+  /* margin-left: 21px; */
   color: var(--font-color-green-300);
 }
 
@@ -660,23 +669,18 @@ input:checked ~ .slider .yearly-sub {
   background-image: url("img/green_check.svg");
   background-repeat: no-repeat;
   background-size: contain;
+
+  position: absolute;
+  top: 14px;
+  left: -18px;
 }
 
-.card-body-button {
-  padding: 0px 50px;
-  /* height: 100%;
-  display: flex;
-  align-items: self-end; */
-}
-.card-body-button button {
-  width: 100%;
-}
 .card-header-title {
   margin-bottom: 22px;
 }
 .card-header-fee,
 .card-header-button {
-  margin-bottom: 9px;
+  margin-bottom: 15px;
 }
 
 .card-header-title h3,
@@ -715,11 +719,12 @@ input:checked ~ .slider .yearly-sub {
 }
 
 .card-body-button {
-  margin-top: 42px;
+  margin: 42px auto 0;
 }
 
 .card-body ul li {
   padding: 5px;
+  position: relative;
 }
 
 .subscription {
@@ -732,10 +737,43 @@ input:checked ~ .slider .yearly-sub {
   visibility: visible;
   opacity: 1;
 }
+.card-header-button .button,
+.card-body-button .button {
+  padding: 15px 44px 15px;
+}
+.card-body {
+  padding-left: 18px;
+}
 
-/* .card-body-button {
-  margin-top: 20px;
-} */
+@media only screen and (max-width: 991px) {
+  .card-container {
+    display: grid;
+    left: 50%;
+    row-gap: 60px;
+    transform: translateX(-50%);
+  }
+  .card-header,
+  .card-body {
+    padding: 0px 99px 22px;
+  }
+
+  .card-body {
+    padding-top: 20px;
+  }
+  .card {
+    width: 513px;
+  }
+  .card-body ul li::before {
+    width: 13px;
+  }
+  .card-body ul li {
+    margin-bottom: 4px;
+  }
+  .card-body-button {
+    margin: 0px auto 0;
+  }
+}
+
 /* Spacer */
 .spacer {
   padding-top: 100rem;
