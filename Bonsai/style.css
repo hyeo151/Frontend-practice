@@ -751,17 +751,31 @@ input:checked ~ .slider .yearly-sub {
     left: 50%;
     row-gap: 60px;
     transform: translateX(-50%);
+    width: 100%;
+    justify-content: center;
   }
   .card-header,
   .card-body {
     padding: 0px 99px 22px;
+    /* max-width: 267px; */
+    margin: 0 auto;
   }
-
+  .card-header-text {
+    max-width: 257px;
+  }
   .card-body {
     padding-top: 20px;
   }
   .card {
-    width: 513px;
+    max-width: 513px;
+    width: 100%;
+  }
+  .card .line-bottom {
+    width: 100%;
+  }
+
+  .card-body ul {
+    max-width: 261px;
   }
   .card-body ul li::before {
     width: 13px;
@@ -771,6 +785,37 @@ input:checked ~ .slider .yearly-sub {
   }
   .card-body-button {
     margin: 0px auto 0;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .section-1-title h2 {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 529px) {
+  .card-header,
+  .card-body {
+    padding: 0px 58px 22px;
+  }
+}
+@media only screen and (max-width: 443px) {
+  .card-header,
+  .card-body {
+    padding: 0px 21px 22px;
+  }
+  .section-1-title h2 {
+    font-size: 35px;
+  }
+  .section-1-body {
+    margin-top: 46px;
+  }
+}
+
+@media only screen and (max-width: 391px) {
+  .card-header,
+  .card-body {
+    padding: 0px 7px 22px;
   }
 }
 
