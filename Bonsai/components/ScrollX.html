@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 20px;
+        font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+
+      * {
+        /* box-sizing: border-box; */
+      }
+
+      p {
+        margin: 0 0 1em 0;
+      }
+
+      .container {
+        /* border: 5px solid rgb(111, 41, 97); */
+        border-radius: 0.5em;
+        padding: 10px;
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 10px;
+      }
+
+      .box {
+        padding: 10px;
+        background-color: rgba(111, 41, 97, 0.3);
+        border: 2px solid rgba(111, 41, 97, 0.5);
+        flex: 0 1 auto;
+        min-width: 250px;
+        max-width: 300px;
+        min-height: 291px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="box">
+        <h3>Collaborators</h3>
+        Invite other users to specific projects for limited access and
+        functionality.
+      </div>
+      <div class="box">
+        <h3>Partners</h3>
+        Invite other users for full account access and company management.
+      </div>
+      <div class="box">
+        <h3>Tax Assistant</h3>
+        Track expenses, identify write-offs, and estimate quarterly taxes
+        easily.
+      </div>
+    </div>
+  </body>
+</html>

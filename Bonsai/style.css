@@ -334,6 +334,31 @@ header {
   transform: scaleX(0);
   transform-origin: bottom right;
 }
+
+.hover-link a {
+  color: var(--font-color-green-200);
+  position: relative;
+  font-weight: 500;
+}
+
+.hover-link a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--font-color-green-200);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease-out;
+  transform: scaleX(1);
+}
+
+.hover-link a:hover:after {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
 /* second-nav-bar Styling */
 .second-nav-bar {
   position: relative;
@@ -736,6 +761,7 @@ input:checked ~ .slider .yearly-sub {
 .subscription.active {
   visibility: visible;
   opacity: 1;
+  position: relative;
 }
 .card-header-button .button,
 .card-body-button .button {
@@ -825,4 +851,90 @@ input:checked ~ .slider .yearly-sub {
 /* Spacer */
 .spacer {
   padding-top: 100rem;
+}
+
+/* Section 2 */
+.section-2 {
+  padding-bottom: 120px;
+}
+
+.section-2-container {
+  max-width: 1144px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section2-title {
+  max-width: 470px;
+  margin: 0 auto;
+  text-align: center;
+}
+.section2-title h2 {
+  color: var(--font-color-green-500);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 100%;
+}
+.adds-on-container {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 30px;
+}
+.adds-on-card {
+  padding: 40px;
+  border: 1px solid #d3dcd4;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 356px;
+  justify-content: space-between;
+}
+
+.adds-on-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 10px 0;
+  color: var(--font-color-green-500);
+}
+.adds-on-body {
+  margin-top: 16px;
+  width: 100%;
+  max-width: 250px;
+}
+.adds-on-body p {
+  color: #65816d;
+  letter-spacing: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.adds-on-learn-more {
+  margin-top: 24px;
+}
+.adds-on-price {
+  text-align: right;
+}
+.adds-on-price p {
+  color: #003c2f;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 100%;
+}
+.adds-on-price p span {
+  color: gray;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 991px) {
+  .adds-on-card {
+    min-height: 291px;
+    min-width: 250px;
+    padding: 28px;
+  }
 }
