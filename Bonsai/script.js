@@ -55,6 +55,21 @@ collapsible.forEach((col) => {
   });
 });
 
+const collapsible_2 = document.querySelectorAll(".accordion-heading");
+collapsible_2.forEach((col) => {
+  col.addEventListener("click", function () {
+    const dropdown = this.nextElementSibling;
+    if (dropdown.style.maxHeight) {
+      dropdown.style.maxHeight = null;
+    } else {
+      dropdown.style.maxHeight = dropdown.scrollHeight + 15 + "px";
+    }
+
+    const dropdownArrow = this.querySelector(".accordion-arrow img");
+    dropdownArrow.classList.toggle("active");
+  });
+});
+
 document
   .querySelector(".toggle-switch input")
   .addEventListener("input", (e) => {
