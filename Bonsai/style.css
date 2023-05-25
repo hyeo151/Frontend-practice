@@ -420,7 +420,7 @@ header {
 .mobile-nav-menu-container {
   position: fixed;
   width: 100%;
-  top: -100%;
+  top: -212%;
   left: 0;
   transition: top 0.5s, opacity 0.3s, visible 0.3s;
   padding: 0 var(--mobile-nav-side-padding);
@@ -945,6 +945,9 @@ input:checked ~ .slider .yearly-sub {
 .section-3 {
   padding-top: 120px;
   padding-bottom: 120px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
 }
 .section-3-container {
   width: 100%;
@@ -970,6 +973,8 @@ input:checked ~ .slider .yearly-sub {
   width: 100%;
   max-width: 640px;
   margin-top: 50px;
+  position: relative;
+  z-index: 2;
 }
 
 .accordion-heading {
