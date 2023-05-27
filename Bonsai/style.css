@@ -1119,10 +1119,10 @@ input:checked ~ .slider .yearly-sub {
   max-width: 540px;
 }
 .leave-image {
-  max-width: 250px;
+  max-width: 45%;
   position: absolute;
-  top: -9px;
-  right: 69px;
+  top: -4%;
+  right: 11%;
 }
 .side-pane {
   max-width: 390px;
